@@ -26,29 +26,33 @@ document.getElementById('accept-button').addEventListener('click', function() {
     }, 500);
 });
 
-// Flower Site: Add flower-specific JS interactions
-const quotes = [
-    "Love is the flower you've got to let grow.",
-    "You are my sunshine on a cloudy day.",
-    "A flower cannot blossom without sunshine, and man cannot live without love.",
-    "Every flower is a soul blossoming in nature."
-];
 
-const flowerGif = document.getElementById('flower-gif');
-const quoteElement = document.getElementById('quote');
-let currentIndex = 0;
 
-flowerGif.addEventListener('click', () => {
+document.getElementById('flower-gif').addEventListener('click', function() {
+    const quotes = [
+        "Love is the flower you've got to let grow.",
+        "You are my sunshine on a cloudy day.",
+        "A flower cannot blossom without sunshine, and man cannot live without love.",
+        "Every flower is a soul blossoming in nature."
+    ];
+    
+    let currentIndex = 0;
+    
+    // Increment index and wrap around if it exceeds the length of the quotes array
     currentIndex = (currentIndex + 1) % quotes.length;
-    console.log("Flower clicked");
-    quoteElement.classList.remove('show');
+
+    // Log to check if click event is working
+    console.log("Flower clicked, currentIndex: ", currentIndex);
+
+    // Remove previous quote and update
+    document.getElementById('quote').classList.remove('show');
     setTimeout(() => {
-        quoteElement.textContent = quotes[currentIndex];
-        quoteElement.classList.add('show');
+        document.getElementById('quote').textContent = quotes[currentIndex];
+        document.getElementById('quote').classList.add('show');
     }, 300);
 });
 
 // Initial load animation
 window.onload = () => {
-    quoteElement.classList.add('show');
+    document.getElementById('quote').classList.add('show');
 };
