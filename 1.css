@@ -1,0 +1,69 @@
+/* Indie Flower Font */
+@font-face {
+    font-family: 'Indie Flower';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/indieflower/v21/m8JVjfNVeKWVnh3QMuKkFcZVaUuH99GUDg.woff2) format('woff2');
+  }
+  
+  /* Body Style */
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background-color: #f5e6d8;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+  }
+  
+  /* Title Style */
+  h1 {
+      font-family: 'Indie Flower', cursive;
+      font-size: 56px;
+      color: #333;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+  }
+  
+  /* Flower Image */
+  .flower img {
+      width: 600px; /* Larger flower size */
+      height: auto;
+      display: block;
+      margin-top: 100px;
+      animation: grow 2s infinite alternate;
+  }
+  
+  /* Flower Growth Animation */
+  @keyframes grow {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+  }
+  
+  .quote {
+    margin-top: 30px;
+    font-family: 'Indie Flower', cursive; /* Applied Indie Flower font to quotes */
+    font-size: 34px; /* Increased font size for the quotes */
+    color: #555;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    width: 100%;
+    max-width: 600px;  
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+  
+  /* Show Animation for Quote */
+  .show {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  

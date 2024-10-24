@@ -1,0 +1,115 @@
+/* Scoped Mail Site Styles */
+#mail-site {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5e6d8;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#mail-site .container {
+    text-align: center;
+}
+
+#mail-site .envelope img {
+    width: 300px;
+    height: auto;
+    transition: opacity 0.5s ease;
+}
+
+#mail-site #message-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#mail-site .text-message {
+    background-color: white;
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#mail-site .buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#mail-site button {
+    background-color: #ffb6c1;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#mail-site button:hover {
+    background-color: #ff9aa2;
+}
+
+#mail-site #decline-button {
+    position: relative;
+}
+
+#mail-site .thought-bubble {
+    display: none;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+#mail-site .envelope:hover .thought-bubble {
+    display: block;
+}
+/* Styling for the envelope and thought bubble */
+.envelope {
+    position: relative;
+    display: inline-block;
+}
+
+.thought-bubble {
+    display: none;
+    position: absolute;
+    top: -50px; /* Adjust this to position above the envelope */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.envelope:hover .thought-bubble {
+    display: block;
+}
+#message-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5e6d8;
+    border-radius: 0px;
+    padding: 20px;
+    width: 60%; /* Adjust width as needed */
+    margin: auto;
+    text-align: center;
+   
+}
