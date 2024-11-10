@@ -113,3 +113,30 @@
     text-align: center;
    
 }
+.video-bubble {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 80%; /* Adjust as needed for size */
+    max-width: 800px; /* Max width for responsiveness */
+    display: flex; /* Ensures child elements align properly */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+}
+
+#video-player {
+    width: 100%; /* Full width of the container */
+    height: 450px; /* Fixed height for a rectangular look */
+    border-radius: 10px; /* Rounded corners for the video */
+    top:50%;
+    left:50%;
+}
+
