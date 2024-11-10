@@ -54,6 +54,20 @@ flowerGif.addEventListener('click', () => {
     }, 300);
 });
 
+document.getElementById('view-video-button').addEventListener('click', function() {
+    const videoBubble = document.getElementById('video-bubble');
+    videoBubble.style.display = 'block';
+    videoBubble.classList.add('show');
+});
+
+// Close the video bubble when clicked outside (optional)
+window.addEventListener('click', function(e) {
+    const videoBubble = document.getElementById('video-bubble');
+    if (e.target !== document.getElementById('view-video-button') && !videoBubble.contains(e.target)) {
+        videoBubble.style.display = 'none';
+    }
+});
+
 // Initial load animation
 window.onload = () => {
     quoteElement.classList.add('show');
